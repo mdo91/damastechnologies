@@ -7,21 +7,8 @@ import illustrationThree from "./images/illustration-3.png";
 import illustrationFour from "./images/illustration-4.png";
 import backgroundPattern from "./images/background-pattern.png";
 import illustrationSix from "./images/illustration-6.png";
-
-const portfolioItems = [
-  {
-    title: "DamasceneRose",
-    subtitle: "Cloud-Native Infrastructure",
-  },
-  {
-    title: "Draw-Idea",
-    subtitle: "Creative iOS Solutions",
-  },
-  {
-    title: "Tik-Tac-iOS",
-    subtitle: "Advanced Bluetooth Connectivity",
-  },
-];
+import customerProfiles from "./images/customer-profiles.png";
+import eclipses from "./images/eclipses.png";
 
 function App() {
   useEffect(() => {
@@ -419,101 +406,114 @@ function App() {
         </section>
 
         <section id="portfolio" className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-          <div data-reveal className="reveal">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">The Proof</h2>
-            <p className="mt-3 max-w-3xl text-ink">
-              Selected delivery samples showcasing performance, scale, and user-centric design.
-            </p>
-          </div>
+          <div
+            data-reveal
+            className="reveal relative overflow-hidden rounded-xl bg-gradient-to-r from-[#19c5ef] to-[#00b2e6] p-7 sm:p-10"
+          >
+            <img
+              src={eclipses}
+              alt=""
+              aria-hidden="true"
+              className="pointer-events-none absolute right-0 top-0 h-full w-auto opacity-95"
+              loading="lazy"
+              decoding="async"
+            />
 
-          <div className="relative mt-10 grid gap-5 md:grid-cols-3" data-reveal-stagger>
-            <span className="scribble-note hidden md:block">SCRIBBLE #4</span>
-            {portfolioItems.map((item) => (
-              <article
-                key={item.title}
-                data-reveal
-                data-reveal-item
-                className="reveal hover-card rounded-2xl border border-line bg-white p-5"
-              >
-                <div className="placeholder-card h-52 w-full">{item.title}</div>
-                <h3 className="mt-4 text-lg font-semibold text-midnight">{item.title}</h3>
-                <p className="mt-2 text-sm text-ink">
-                  {item.subtitle}
+            <div className="relative z-10 flex flex-col gap-8 sm:gap-10 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-3xl text-white">
+                <h2 className="text-4xl font-extrabold leading-tight sm:text-5xl">
+                  Empower your teams with the Performance Academy frameworks
+                  needed to maximize brand value 😍
+                </h2>
+                <p className="mt-7 text-lg font-medium text-white/95">
+                  Join with more 200 happy customers
                 </p>
-              </article>
-            ))}
+                <div className="mt-3 flex items-center gap-3">
+                  <img
+                    src={customerProfiles}
+                    alt="Happy customer profiles"
+                    className="h-10 w-auto object-contain"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="text-lg font-medium text-white">and others</span>
+                </div>
+              </div>
+
+              <a
+                href="#contact"
+                className="inline-flex w-fit items-center justify-center whitespace-nowrap rounded-lg bg-white px-8 py-3.5 text-base font-semibold text-[#06a8dc] shadow-soft transition hover:bg-slate-50"
+              >
+                Book your appointment
+              </a>
+            </div>
           </div>
         </section>
       </main>
 
-      <footer id="contact" className="border-t border-line bg-slateDeep text-slate-100">
-        <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_1fr] lg:px-8">
-          <section>
-            <h2 className="text-2xl font-bold">Ready to scale your vision?</h2>
-            <p className="mt-3 max-w-md text-slate-300">
-              Whether you need a mobile architect, a cloud migration expert, or a custom AI agent, let's build the future together.
-            </p>
-            <div className="mt-6 flex gap-3 text-sm text-slate-300">
-              <a href="#" className="rounded-full border border-slate-600 px-3 py-1 hover:border-accent">
-                LinkedIn
-              </a>
-              <a href="#" className="rounded-full border border-slate-600 px-3 py-1 hover:border-accent">
-                GitHub
-              </a>
-              <a href="#" className="rounded-full border border-slate-600 px-3 py-1 hover:border-accent">
-                X
-              </a>
-            </div>
-          </section>
+      <footer id="contact" className="border-t border-line bg-white text-ink">
+        <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 border-b border-line pb-5">
+            <img
+              src={logoImage}
+              alt="Damas Technologies logo"
+              className="h-8 w-8 object-contain"
+              loading="lazy"
+              decoding="async"
+            />
+            <span className="text-lg font-semibold text-slateDeep">Damas Technologies</span>
+          </div>
 
-          <section>
-            <form className="grid gap-3">
-              <label className="text-sm text-slate-300" htmlFor="name">
-                Name
-              </label>
-              <input
-                id="name"
-                className="rounded-lg border border-slate-600 bg-slate-900/30 px-3 py-2 text-slate-100 outline-none placeholder:text-slate-400 focus:border-accent"
-                placeholder="Your name"
-              />
-              <label className="text-sm text-slate-300" htmlFor="organization">
-                Organization
-              </label>
-              <input
-                id="organization"
-                className="rounded-lg border border-slate-600 bg-slate-900/30 px-3 py-2 text-slate-100 outline-none placeholder:text-slate-400 focus:border-accent"
-                placeholder="Your company"
-              />
-              <label className="text-sm text-slate-300" htmlFor="projectType">
-                Project Type
-              </label>
-              <select
-                id="projectType"
-                defaultValue="Mobile"
-                className="rounded-lg border border-slate-600 bg-slate-900/30 px-3 py-2 text-slate-100 outline-none focus:border-accent"
-              >
-                <option value="Mobile">Mobile</option>
-                <option value="Cloud">Cloud</option>
-                <option value="AI">AI</option>
-                <option value="Training">Training</option>
-              </select>
-              <label className="text-sm text-slate-300" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows="4"
-                className="rounded-lg border border-slate-600 bg-slate-900/30 px-3 py-2 text-slate-100 outline-none placeholder:text-slate-400 focus:border-accent"
-                placeholder="Tell us what you want to transform"
-              />
-              <button
-                type="submit"
-                className="mt-2 rounded-full bg-accent px-5 py-2.5 font-semibold text-white hover:bg-teal-600"
-              >
-                Send Request
-              </button>
-            </form>
-          </section>
+          <div className="mt-7 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <h3 className="text-lg font-semibold text-slateDeep">About Damas Technologies LLC</h3>
+              <ul className="mt-3 space-y-2 text-base">
+                <li><a href="#" className="hover:text-slateDeep">Company Overview</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Careers</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Press &amp; Media</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Testimonials</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-slateDeep">Resources</h3>
+              <ul className="mt-3 space-y-2 text-base">
+                <li><a href="#" className="hover:text-slateDeep">Blog</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Help Center</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Webinars &amp; Events</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Case Studies</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-slateDeep">Support &amp; Contact</h3>
+              <ul className="mt-3 space-y-2 text-base">
+                <li><a href="#" className="hover:text-slateDeep">Contact Us</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Technical Support</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Feedback</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Community Forum</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-slateDeep">Connect</h3>
+              <ul className="mt-3 space-y-2 text-base">
+                <li><a href="#" className="hover:text-slateDeep">Instagram</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Facebook</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Twitter / X</a></li>
+                <li><a href="#" className="hover:text-slateDeep">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col gap-3 border-t border-line pt-5 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+            <p>@2026 Damas Technologies LLC · All rights reserved.</p>
+            <div className="flex gap-5">
+              <a href="#" className="hover:text-slateDeep">Term of use</a>
+              <a href="#" className="hover:text-slateDeep">Privacy policy</a>
+              <a href="#" className="hover:text-slateDeep">Security</a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
