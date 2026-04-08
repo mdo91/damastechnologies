@@ -9,11 +9,11 @@
     <script>
       // Direct entry fallback for GitHub Pages deep-link.
       // Redirect into SPA route format used by index.html decoder.
-      const { location } = window;
-      const origin = `${location.protocol}//${location.hostname}${location.port ? `:${location.port}` : ""}`;
+      const currentLocation = window.location;
+      const origin = `${currentLocation.protocol}//${currentLocation.hostname}${currentLocation.port ? `:${currentLocation.port}` : ""}`;
       const repoBase = "/damastechnologies";
-      const hash = location.hash || "";
-      location.replace(`${origin}${repoBase}/?/company-overview${hash}`);
+      const hash = currentLocation.hash || "";
+      currentLocation.replace(`${origin}${repoBase}/?/company-overview${hash}`);
     </script>
   </body>
 </html>
