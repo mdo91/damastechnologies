@@ -13,7 +13,7 @@ import softwareIllustrationTwo from "./images/software-illustration-2.png";
 import founderImage from "./images/fonuder.png";
 import productOwnerImage from "./images/product-owner.png";
 import designerImage from "./images/designer.png";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
 
 function CompanyOverviewPage() {
   const overviewSubtextClass = "text-base leading-relaxed text-[#5f6d7a] sm:text-xl";
@@ -805,9 +805,21 @@ function HomePage() {
   );
 }
 
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) return;
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname, hash]);
+
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/company-overview" element={<CompanyOverviewPage />} />
