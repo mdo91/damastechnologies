@@ -2,6 +2,8 @@
 
 Modern React + Vite + Tailwind landing page for a Software & AI Transformation startup.
 
+[![Deploy GitHub Pages](https://github.com/mdo91/damastechnologies/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/mdo91/damastechnologies/actions/workflows/deploy-pages.yml)
+
 ## Stack
 
 - React
