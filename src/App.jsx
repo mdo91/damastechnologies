@@ -817,12 +817,14 @@ function ScrollToTop() {
 }
 
 function App() {
+  const routerBase = import.meta.env.BASE_URL.replace(/\/$/, "");
+
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <BrowserRouter basename={routerBase}>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/company-overview" element={<CompanyOverviewPage />} />
+        <Route path="/company-overview/*" element={<CompanyOverviewPage />} />
       </Routes>
     </BrowserRouter>
   );
