@@ -41,6 +41,22 @@ Build output is generated in the `dist/` directory.
 npm run preview
 ```
 
+## GitHub Pages deployment
+
+This project is configured for GitHub Pages with:
+
+- Production Vite base path: `/damastechnologies/`
+- SPA fallback support (`public/404.html`) for direct links like `/company-overview`
+- GitHub Actions workflow at `.github/workflows/deploy-pages.yml`
+
+To publish correctly, use **GitHub Actions Pages deployment** (do not publish repository root as static files).
+
+In GitHub repository settings:
+
+1. Go to **Settings → Pages**
+2. Set **Source** to **GitHub Actions**
+3. Push to `main` to trigger deployment
+
 ## Project structure
 
 ```text
