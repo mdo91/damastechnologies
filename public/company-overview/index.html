@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Damas Technologies</title>
+  </head>
+  <body>
+    <script>
+      // Direct entry fallback for GitHub Pages deep-link.
+      // Redirect into SPA route format used by index.html decoder.
+      const { location } = window;
+      const origin = `${location.protocol}//${location.hostname}${location.port ? `:${location.port}` : ""}`;
+      const repoBase = "/damastechnologies";
+      const hash = location.hash || "";
+      location.replace(`${origin}${repoBase}/?/company-overview${hash}`);
+    </script>
+  </body>
+</html>
