@@ -13,6 +13,7 @@ import softwareIllustrationTwo from "./images/software-illustration-2.png";
 import founderImage from "./images/fonuder.png";
 import productOwnerImage from "./images/product-owner.png";
 import designerImage from "./images/designer.png";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 
 function CompanyOverviewPage() {
   const overviewSubtextClass = "text-base leading-relaxed text-[#5f6d7a] sm:text-xl";
@@ -23,13 +24,13 @@ function CompanyOverviewPage() {
     <div className="min-h-screen bg-white text-slateDeep">
       <header className="sticky top-0 z-50 border-b border-line/80 bg-white/95 backdrop-blur">
         <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
-          <a href="/" className="flex items-center gap-2.5 text-sm font-bold tracking-tight sm:text-base">
+          <Link to="/" className="flex items-center gap-2.5 text-sm font-bold tracking-tight sm:text-base">
             <img src={logoImage} alt="Damas Technologies logo" className="h-7 w-7 object-contain sm:h-8 sm:w-8" />
             <span className="hidden sm:inline">Damas Technologies</span>
             <span className="sm:hidden">Damas</span>
-          </a>
+          </Link>
           <div className="hidden items-center gap-6 text-sm font-medium text-ink md:flex">
-            <a href="/" className="hover:text-slateDeep">Home</a>
+            <Link to="/" className="hover:text-slateDeep">Home</Link>
             <a href="#capabilities" className="hover:text-slateDeep">Capabilities</a>
             <a href="#team" className="hover:text-slateDeep">Team</a>
             <a href="#contact" className="hover:text-slateDeep">Contact</a>
@@ -43,7 +44,7 @@ function CompanyOverviewPage() {
         </nav>
         <div className="border-t border-line/70 px-4 py-2 md:hidden">
           <div className="mx-auto flex w-full max-w-6xl items-center gap-4 overflow-x-auto whitespace-nowrap text-sm font-medium text-ink">
-            <a href="/" className="shrink-0 hover:text-slateDeep">Home</a>
+            <Link to="/" className="shrink-0 hover:text-slateDeep">Home</Link>
             <a href="#capabilities" className="shrink-0 hover:text-slateDeep">Capabilities</a>
             <a href="#team" className="shrink-0 hover:text-slateDeep">Team</a>
             <a href="#contact" className="shrink-0 hover:text-slateDeep">Contact</a>
@@ -225,7 +226,7 @@ function CompanyOverviewPage() {
             <div>
               <h3 className="text-lg font-semibold text-slateDeep">About Damas Technologies LLC</h3>
               <ul className="mt-3 space-y-2 text-base">
-                <li><a href="/company-overview" className="hover:text-slateDeep">Company Overview</a></li>
+                <li><Link to="/company-overview" className="hover:text-slateDeep">Company Overview</Link></li>
                 <li><a href="#" className="hover:text-slateDeep">Careers</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Press &amp; Media</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Testimonials</a></li>
@@ -277,7 +278,7 @@ function CompanyOverviewPage() {
   );
 }
 
-function App() {
+function HomePage() {
   useEffect(() => {
     const elements = document.querySelectorAll("[data-reveal]");
     const staggerGroups = document.querySelectorAll("[data-reveal-stagger]");
@@ -318,15 +319,6 @@ function App() {
     elements.forEach((element) => observer.observe(element));
     return () => observer.disconnect();
   }, []);
-
-  const pathname =
-    typeof window !== "undefined"
-      ? window.location.pathname.replace(/\/+$/, "") || "/"
-      : "/";
-
-  if (pathname === "/company-overview") {
-    return <CompanyOverviewPage />;
-  }
 
   return (
     <div className="min-h-screen bg-white text-slateDeep">
@@ -761,7 +753,7 @@ function App() {
             <div>
               <h3 className="text-lg font-semibold text-slateDeep">About Damas Technologies LLC</h3>
               <ul className="mt-3 space-y-2 text-base">
-                <li><a href="/company-overview" className="hover:text-slateDeep">Company Overview</a></li>
+                <li><Link to="/company-overview" className="hover:text-slateDeep">Company Overview</Link></li>
                 <li><a href="#" className="hover:text-slateDeep">Careers</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Press &amp; Media</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Testimonials</a></li>
@@ -810,6 +802,17 @@ function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/company-overview" element={<CompanyOverviewPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

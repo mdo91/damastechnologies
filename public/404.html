@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Damas Technologies</title>
+  </head>
+  <body>
+    <script>
+      // GitHub Pages SPA fallback redirect.
+      // Repo name = damastechnologies, so segmentCount is 1.
+      const segmentCount = 1;
+      const { location } = window;
+      const origin = `${location.protocol}//${location.hostname}${location.port ? `:${location.port}` : ""}`;
+      const redirectPath = location.pathname
+        .split("/")
+        .slice(1 + segmentCount)
+        .join("/")
+        .replace(/&/g, "~and~");
+      const search = location.search ? `&${location.search.slice(1).replace(/&/g, "~and~")}` : "";
+      const hash = location.hash || "";
+
+      location.replace(
+        `${origin}${location.pathname
+          .split("/")
+          .slice(0, 1 + segmentCount)
+          .join("/")}/?/${redirectPath}${search}${hash}`
+      );
+    </script>
+  </body>
+</html>

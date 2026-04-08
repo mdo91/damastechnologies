@@ -7,6 +7,23 @@
       name="description"
       content="Software and AI transformation startup landing page."
     />
+    <script>
+      // Decode GitHub Pages SPA fallback redirects.
+      (function () {
+        const { location } = window;
+        if (location.search.length > 1 && location.search[1] === "/") {
+          const decoded = location.search
+            .slice(1)
+            .split("&")
+            .map((part) => part.replace(/~and~/g, "&"))
+            .join("?");
+          const basePath = location.pathname.endsWith("/")
+            ? location.pathname.slice(0, -1)
+            : location.pathname;
+          window.history.replaceState(null, "", `${basePath}${decoded}${location.hash}`);
+        }
+      })();
+    </script>
     <title>Agentic Intelligence Transformation</title>
   </head>
   <body class="bg-white">
