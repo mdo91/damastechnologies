@@ -13,6 +13,10 @@ import softwareIllustrationTwo from "./images/software-illustration-2.png";
 import founderImage from "./images/fonuder.png";
 import productOwnerImage from "./images/product-owner.png";
 import designerImage from "./images/designer.png";
+import linkIcon from "./images/link-icon.png";
+import callIcon from "./images/call-icon.png";
+import locationIcon from "./images/location-icon.png";
+import emailIcon from "./images/email-icon.png";
 import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
 
 function CompanyOverviewPage() {
@@ -246,7 +250,185 @@ function CompanyOverviewPage() {
             <div>
               <h3 className="text-lg font-semibold text-slateDeep">Support &amp; Contact</h3>
               <ul className="mt-3 space-y-2 text-base">
-                <li><a href="#" className="hover:text-slateDeep">Contact Us</a></li>
+                <li><Link to="/contact-us" className="hover:text-slateDeep">Contact Us</Link></li>
+                <li><a href="#" className="hover:text-slateDeep">Technical Support</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Feedback</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Community Forum</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-slateDeep">Connect</h3>
+              <ul className="mt-3 space-y-2 text-base">
+                <li><a href="#" className="hover:text-slateDeep">Instagram</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Facebook</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Twitter / X</a></li>
+                <li><a href="#" className="hover:text-slateDeep">LinkedIn</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-10 flex flex-col gap-3 border-t border-line pt-5 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+            <p>@2026 Damas Technologies LLC · All rights reserved.</p>
+            <div className="flex gap-5">
+              <a href="#" className="hover:text-slateDeep">Term of use</a>
+              <a href="#" className="hover:text-slateDeep">Privacy policy</a>
+              <a href="#" className="hover:text-slateDeep">Security</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
+
+function ContactPage() {
+  return (
+    <div className="min-h-screen bg-white text-slateDeep">
+      <header className="sticky top-0 z-50 border-b border-line/80 bg-white/95 backdrop-blur">
+        <nav className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-8">
+          <Link to="/" className="flex items-center gap-2.5 text-sm font-bold tracking-tight sm:text-base">
+            <img src={logoImage} alt="Damas Technologies logo" className="h-7 w-7 object-contain sm:h-8 sm:w-8" />
+            <span className="hidden sm:inline">Damas Technologies</span>
+            <span className="sm:hidden">Damas</span>
+          </Link>
+          <div className="hidden items-center gap-6 text-sm font-medium text-ink md:flex">
+            <Link to="/" className="hover:text-slateDeep">Home</Link>
+            <a href="/#services" className="hover:text-slateDeep">Services</a>
+            <Link to="/company-overview" className="hover:text-slateDeep">Company Overview</Link>
+            <a href="#contact-details" className="hover:text-slateDeep">Contact</a>
+          </div>
+          <a
+            href="#contact-details"
+            className="rounded-full bg-[#5f50d8] px-4 py-2 text-xs font-semibold text-white transition hover:bg-[#4f42c2] sm:px-6 sm:py-2.5 sm:text-sm"
+          >
+            Contact Us
+          </a>
+        </nav>
+        <div className="border-t border-line/70 px-4 py-2 md:hidden">
+          <div className="mx-auto flex w-full max-w-6xl items-center gap-4 overflow-x-auto whitespace-nowrap text-sm font-medium text-ink">
+            <Link to="/" className="shrink-0 hover:text-slateDeep">Home</Link>
+            <a href="/#services" className="shrink-0 hover:text-slateDeep">Services</a>
+            <Link to="/company-overview" className="shrink-0 hover:text-slateDeep">Company</Link>
+            <a href="#contact-details" className="shrink-0 hover:text-slateDeep">Contact</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="contact-details">
+        <section className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+          <div className="rounded-2xl bg-[#f5f5f7] p-5 sm:rounded-[28px] sm:p-10">
+            <div className="grid gap-7 sm:gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+              <div>
+                <h1 className="text-2xl font-extrabold tracking-tight text-black sm:text-4xl">Get In Touch</h1>
+              </div>
+
+              <div className="grid gap-y-7 gap-x-6 sm:grid-cols-2 sm:gap-x-[3.3rem] sm:gap-y-8">
+                <article>
+                  <div className="flex items-center gap-2.5">
+                    <img src={emailIcon} alt="" aria-hidden="true" className="h-4 w-4 object-contain sm:h-5 sm:w-5" />
+                    <h2 className="text-lg font-bold leading-tight text-black sm:text-[1.35rem]">Email us</h2>
+                  </div>
+                  <p className="mt-2 max-w-[28ch] text-sm leading-relaxed text-[#6f7480] sm:text-lg">
+                    Connect with us easily by sending an email
+                  </p>
+                  <a
+                    href="mailto:hi@damastechnologies.com"
+                    className="mt-2 inline-flex break-all text-sm leading-relaxed text-[#7a7d86] underline decoration-[#afb4bd] underline-offset-2 hover:text-slateDeep sm:text-lg"
+                  >
+                    hi@damastechnologies.com
+                  </a>
+                </article>
+
+                <article>
+                  <div className="flex items-center gap-2.5">
+                    <img src={callIcon} alt="" aria-hidden="true" className="h-4 w-4 object-contain sm:h-5 sm:w-5" />
+                    <h2 className="text-lg font-bold leading-tight text-black sm:text-[1.35rem]">Call us</h2>
+                  </div>
+                  <p className="mt-2 max-w-[28ch] text-sm leading-relaxed text-[#6f7480] sm:text-lg">
+                    Give us a call to explore the possibilities
+                  </p>
+                  <a
+                    href="tel:+491639748382"
+                    className="mt-2 inline-flex text-sm leading-relaxed text-[#7a7d86] hover:text-slateDeep sm:text-lg"
+                  >
+                    +49 163 974 83 82
+                  </a>
+                </article>
+
+                <article>
+                  <div className="flex items-center gap-2.5">
+                    <img src={locationIcon} alt="" aria-hidden="true" className="h-4 w-4 object-contain sm:h-5 sm:w-5" />
+                    <h2 className="text-lg font-bold leading-tight text-black sm:text-[1.35rem]">Address</h2>
+                  </div>
+                  <div className="mt-2 space-y-2 text-sm leading-relaxed text-[#7a7d86] sm:text-lg">
+                    <p><span className="font-semibold text-[#6f7480]">United States:</span> 30 N Gould St Ste R, Sheridan, WY 82801.</p>
+                    <p><span className="font-semibold text-[#6f7480]">Germany:</span> Mengelbergstraße 2 - 50676 Köln.</p>
+                    <p><span className="font-semibold text-[#6f7480]">Turkiye:</span> Avcilar 24 - 34315 Istanbul.</p>
+                  </div>
+                </article>
+
+                <article>
+                  <div className="flex items-center gap-2.5">
+                    <img src={linkIcon} alt="" aria-hidden="true" className="h-4 w-4 object-contain sm:h-5 sm:w-5" />
+                    <h2 className="text-lg font-bold leading-tight text-black sm:text-[1.35rem]">Follow us</h2>
+                  </div>
+                  <p className="mt-2 max-w-[32ch] text-sm leading-relaxed text-[#6f7480] sm:text-lg">
+                    Follow us on different social media channels and learn more our work.
+                  </p>
+                  <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm text-[#7a7d86] sm:text-lg">
+                    <a href="#" className="inline-flex py-0.5 underline decoration-[#afb4bd] underline-offset-2 hover:text-slateDeep">Linkedin</a>
+                    <a href="#" className="inline-flex py-0.5 underline decoration-[#afb4bd] underline-offset-2 hover:text-slateDeep">Instagram</a>
+                    <a href="#" className="inline-flex py-0.5 underline decoration-[#afb4bd] underline-offset-2 hover:text-slateDeep">X/Twitter</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="contact" className="bg-white text-ink">
+        <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-4 pb-5">
+            <div className="flex items-center gap-3 whitespace-nowrap">
+              <img
+                src={logoImage}
+                alt="Damas Technologies logo"
+                className="h-8 w-8 object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+              <span className="text-lg font-semibold text-slateDeep">Damas Technologies</span>
+            </div>
+            <div className="h-px flex-1 bg-line" />
+          </div>
+
+          <div className="mt-7 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <h3 className="text-lg font-semibold text-slateDeep">About Damas Technologies LLC</h3>
+              <ul className="mt-3 space-y-2 text-base">
+                <li><Link to="/company-overview" className="hover:text-slateDeep">Company Overview</Link></li>
+                <li><a href="#" className="hover:text-slateDeep">Careers</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Press &amp; Media</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Testimonials</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-slateDeep">Resources</h3>
+              <ul className="mt-3 space-y-2 text-base">
+                <li><a href="#" className="hover:text-slateDeep">Blog</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Help Center</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Webinars &amp; Events</a></li>
+                <li><a href="#" className="hover:text-slateDeep">Case Studies</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-slateDeep">Support &amp; Contact</h3>
+              <ul className="mt-3 space-y-2 text-base">
+                <li><Link to="/contact-us" className="hover:text-slateDeep">Contact Us</Link></li>
                 <li><a href="#" className="hover:text-slateDeep">Technical Support</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Feedback</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Community Forum</a></li>
@@ -773,7 +955,7 @@ function HomePage() {
             <div>
               <h3 className="text-lg font-semibold text-slateDeep">Support &amp; Contact</h3>
               <ul className="mt-3 space-y-2 text-base">
-                <li><a href="#" className="hover:text-slateDeep">Contact Us</a></li>
+                <li><Link to="/contact-us" className="hover:text-slateDeep">Contact Us</Link></li>
                 <li><a href="#" className="hover:text-slateDeep">Technical Support</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Feedback</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Community Forum</a></li>
@@ -825,6 +1007,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/company-overview/*" element={<CompanyOverviewPage />} />
+        <Route path="/contact-us/*" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>
   );
