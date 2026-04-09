@@ -263,7 +263,7 @@ function CompanyOverviewPage() {
                 <li><a href="#" className="hover:text-slateDeep">Instagram</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Facebook</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Twitter / X</a></li>
-                <li><a href="#" className="hover:text-slateDeep">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/company/damas-technologies/?" target="_blank" rel="noopener noreferrer" className="hover:text-slateDeep">LinkedIn</a></li>
               </ul>
             </div>
           </div>
@@ -377,7 +377,7 @@ function ContactPage() {
                     Follow us on different social media channels and learn more our work.
                   </p>
                   <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-sm text-[#7a7d86] sm:text-lg">
-                    <a href="#" className="inline-flex py-0.5 underline decoration-[#afb4bd] underline-offset-2 hover:text-slateDeep">Linkedin</a>
+                    <a href="https://www.linkedin.com/company/damas-technologies/?" target="_blank" rel="noopener noreferrer" className="inline-flex py-0.5 underline decoration-[#afb4bd] underline-offset-2 hover:text-slateDeep">LinkedIn</a>
                     <a href="#" className="inline-flex py-0.5 underline decoration-[#afb4bd] underline-offset-2 hover:text-slateDeep">Instagram</a>
                     <a href="#" className="inline-flex py-0.5 underline decoration-[#afb4bd] underline-offset-2 hover:text-slateDeep">X/Twitter</a>
                   </div>
@@ -441,7 +441,7 @@ function ContactPage() {
                 <li><a href="#" className="hover:text-slateDeep">Instagram</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Facebook</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Twitter / X</a></li>
-                <li><a href="#" className="hover:text-slateDeep">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/company/damas-technologies/?" target="_blank" rel="noopener noreferrer" className="hover:text-slateDeep">LinkedIn</a></li>
               </ul>
             </div>
           </div>
@@ -968,7 +968,7 @@ function HomePage() {
                 <li><a href="#" className="hover:text-slateDeep">Instagram</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Facebook</a></li>
                 <li><a href="#" className="hover:text-slateDeep">Twitter / X</a></li>
-                <li><a href="#" className="hover:text-slateDeep">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/company/damas-technologies/?" target="_blank" rel="noopener noreferrer" className="hover:text-slateDeep">LinkedIn</a></li>
               </ul>
             </div>
           </div>
