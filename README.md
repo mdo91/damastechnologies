@@ -47,7 +47,7 @@ npm run preview
 
 This project is configured for GitHub Pages with:
 
-- Production Vite base path: `/damastechnologies/`
+- Production Vite base path: `/` (custom domain)
 - SPA fallback support (`public/404.html`) for direct links like `/company-overview`
 - GitHub Actions workflow at `.github/workflows/deploy-pages.yml`
 

@@ -8,8 +8,8 @@
   <body>
     <script>
       // GitHub Pages SPA fallback redirect.
-      // Repo name = damastechnologies, so segmentCount is 1.
-      const segmentCount = 1;
+      // Custom-domain deployment uses root path, so segmentCount is 0.
+      const segmentCount = 0;
       const { location } = window;
       const origin = `${location.protocol}//${location.hostname}${location.port ? `:${location.port}` : ""}`;
       const redirectPath = location.pathname

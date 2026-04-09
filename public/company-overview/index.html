@@ -11,9 +11,8 @@
       // Redirect into SPA route format used by index.html decoder.
       const currentLocation = window.location;
       const origin = `${currentLocation.protocol}//${currentLocation.hostname}${currentLocation.port ? `:${currentLocation.port}` : ""}`;
-      const repoBase = "/damastechnologies";
       const hash = currentLocation.hash || "";
-      currentLocation.replace(`${origin}${repoBase}/?/company-overview${hash}`);
+      currentLocation.replace(`${origin}/?/company-overview${hash}`);
     </script>
   </body>
 </html>
