@@ -726,7 +726,9 @@ function HomePage() {
                   workflows and AI-augmented efficiency
                 </p>
                 <a
-                  href="#contact"
+                  href="https://calendly.com/hi-damastechnologies/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-7 inline-flex items-center gap-2 rounded-full border border-white/45 bg-white/12 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white hover:text-[#2f7cff]"
                 >
                   Request a Consultation
@@ -905,7 +907,9 @@ function HomePage() {
               </div>
 
               <a
-                href="#contact"
+                href="https://calendly.com/hi-damastechnologies/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex w-full items-center justify-center whitespace-nowrap rounded-lg bg-white px-6 py-3 text-sm font-semibold text-[#06a8dc] shadow-soft transition hover:bg-slate-50 sm:w-fit sm:px-8 sm:py-3.5 sm:text-base"
               >
                 Book your appointment
