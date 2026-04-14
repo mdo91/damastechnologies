@@ -133,7 +133,7 @@ function CompanyOverviewPage() {
           </div>
         </section>
 
-        <section id="team" className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        {/* <section id="team" className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
           <div className="text-center">
             <span className="inline-flex rounded-full border border-[#d7d9de] bg-[#f8fafc] px-3.5 py-1 text-base font-medium text-[#5f6d7a] sm:px-4 sm:text-lg">
               Team
@@ -207,7 +207,7 @@ function CompanyOverviewPage() {
               </p>
             </article>
           </div>
-        </section>
+        </section> */}
       </main>
 
       <footer id="contact" className="bg-white text-ink">
