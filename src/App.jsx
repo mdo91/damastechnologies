@@ -625,7 +625,7 @@ function HomePage() {
                 <h3 className="text-3xl font-extrabold leading-tight text-[#005d95] sm:text-4xl">Mobile Development</h3>
                 <p className="mt-4 text-lg leading-relaxed text-ink sm:mt-5 sm:text-xl">
                   Specialized in native iOS and cross-platform architecture. We
-                  build robust, fluid mobile experiences with over 8 years of
+                  build robust, fluid mobile experiences with a decade of
                   engineering excellence at the core.
                 </p>
                 {/* // future enable: Read more link
